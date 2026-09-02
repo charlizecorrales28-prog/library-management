@@ -1,23 +1,29 @@
 /* =========================================
    NAV.CSS
+   Navigation Links
 ========================================= */
 
 .nav-link {
     color: var(--color-dark);
-    transition: var(--transition-fast);
+    display: inline-block;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
 }
 
-.nav-link:hover,
+.nav-link:hover {
+    color: var(--color-primary);
+    transform: translateY(-3px);
+}
+
 .nav-link.active {
     color: var(--color-primary);
-}
-
-.nav-link.active {
     font-weight: var(--font-weight-bold);
     border-bottom: 3px solid var(--color-navy);
     padding-bottom: 5px;
 }
 
-.btn-login:hover {
-    background: var(--color-secondary);
+.nav-link.active:hover {
+    transform: translateY(-3px);
 }

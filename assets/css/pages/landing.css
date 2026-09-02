@@ -1,12 +1,17 @@
 /* =========================================
-   HERO.CSS
+   LANDING.CSS
 ========================================= */
 
 .hero-bg {
     min-height: 620px;
+
     background:
-        linear-gradient(rgba(0, 51, 102, 0.88), rgba(0, 87, 184, 0.78)),
-        url("../../images/library-hero.jpg");
+        linear-gradient(
+            rgba(0, 51, 102, 0.88),
+            rgba(0, 87, 184, 0.78)
+        ),
+        url("../../images/backgrounds/library-hero.jpg");
+
     background-size: cover;
     background-position: center;
 }
@@ -24,4 +29,3 @@
 .hero-kicker {
     letter-spacing: 2px;
 }
-
