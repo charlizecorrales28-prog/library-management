@@ -16,3 +16,16 @@
 @import url("./base/position.css");
 @import url("./base/radius.css");
 @import url("./base/z-index.css");
+
+/* Small supplementary files for the handful of things utilities can't do:
+   hover states, media queries, gradients/background-image, clamp(), scroll animation */
+@import url("./customs/global.css");
+@import url("./components/animations.css");
+@import url("./customs/announcement.css");
+@import url("./components/buttons/buttons.css");
+@import url("./components/cards.css");
+@import url("./layout/footer.css");
+@import url("./pages/landing.css");
+@import url("./layout/nav.css");
+@import url("./customs/responsive.css");
+@import url("./components/search.css");
