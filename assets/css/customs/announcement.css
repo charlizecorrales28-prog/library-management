@@ -1,0 +1,18 @@
+/* =========================================
+   ANNOUNCEMENTS.CSS
+   Library Announcement Section
+========================================= */
+
+.announcement {
+    padding: 45px 8%;
+}
+
+.announcement-icon {
+    width: 65px;
+    height: 65px;
+    font-size: 25px;
+}
+
+.announcement-text {
+    color: #E8D9DE;
+}

@@ -1,0 +1,35 @@
+/* =========================================
+SEARCH.CSS
+Search box and search button
+========================================= */
+
+.search-content {
+    max-width: 800px;
+}
+
+.search-box {
+    max-width: 800px;
+    transition: 0.3s ease;
+}
+
+.search-box:focus-within {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+.search-box input {
+    outline: none;
+}
+
+.search-box input:focus {
+    outline: none;
+}
+
+.search-box button {
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.search-box button:hover {
+    transform: translateY(-2px);
+}

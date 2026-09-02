@@ -1,0 +1,31 @@
+/* =========================================
+   LANDING.CSS
+========================================= */
+
+.hero-bg {
+    min-height: 620px;
+
+    background:
+        linear-gradient(
+            rgba(0, 51, 102, 0.88),
+            rgba(0, 87, 184, 0.78)
+        ),
+        url("../../images/backgrounds/library-hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-title {
+    font-size: clamp(40px, 6vw, 68px);
+    line-height: 1.15;
+}
+
+.hero-desc {
+    max-width: 650px;
+    font-size: 17px;
+}
+
+.hero-kicker {
+    letter-spacing: 2px;
+}

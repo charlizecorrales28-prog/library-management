@@ -2,23 +2,35 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Britech College Library</title>
 
-    <link rel="stylesheet" href="./assets/css/style.css">
+<link rel="stylesheet" href="./assets/css/base/reset.css">
+<link rel="stylesheet" href="./assets/css/base/theme.css">
+<link rel="stylesheet" href="./assets/css/base/colors.css">
+<link rel="stylesheet" href="./assets/css/base/display.css">
+<link rel="stylesheet" href="./assets/css/base/flex.css">
+<link rel="stylesheet" href="./assets/css/base/gap.css">
+<link rel="stylesheet" href="./assets/css/base/width.css">
+<link rel="stylesheet" href="./assets/css/base/height.css">
+<link rel="stylesheet" href="./assets/css/base/margin.css">
+<link rel="stylesheet" href="./assets/css/base/padding.css">
+<link rel="stylesheet" href="./assets/css/base/border.css">
+<link rel="stylesheet" href="./assets/css/base/radius.css">
+<link rel="stylesheet" href="./assets/css/base/shadow.css">
+<link rel="stylesheet" href="./assets/css/base/text.css">
+<link rel="stylesheet" href="./assets/css/base/position.css">
+<link rel="stylesheet" href="./assets/css/base/z-index.css">
+<link rel="stylesheet" href="./assets/css/base/opacity.css">
+<link rel="stylesheet" href="./assets/css/base/overflow.css">
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+<link rel="stylesheet" href="./assets/css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-
-    <link
-        rel="stylesheet"
+    <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
 </head>
 
 <body>
@@ -26,63 +38,29 @@
 <!-- =========================
      NAVIGATION
 ========================= -->
+<header class="bg-white shadow-sm position-sticky top-0 z-50">
 
-<header>
+    <nav class="navbar container d-flex items-center justify-between gap-8 px-6 py-3">
 
-    <nav class="navbar">
-
-        <div class="logo">
-
-            <img src="./assets/images/logo/britech-logo (1).png" alt="Britech College Logo">
-
-            <div class="logo-text">
-
-                <h2>Britech College</h2>
-
-                <p>Library Portal</p>
-
+        <div class="d-flex items-center gap-3">
+            <img src="./assets/images/logo/britech-logo (1).png" alt="Britech College Logo" class="w-64 h-64 d-block">
+            <div>
+                <h2 class="text-secondary text-lg font-semibold">Britech College</h2>
+                <p class="text-primary text-12 font-medium">Library Portal</p>
             </div>
-
         </div>
 
-        <ul class="nav-links">
-
-            <li>
-                <a href="index.html" class="active">
-                    Home
-                </a>
-            </li>
-
-            <li>
-                <a href="catalog.html">
-                    Catalog
-                </a>
-            </li>
-
-            <li>
-                <a href="#services">
-                    Services
-                </a>
-            </li>
-
-            <li>
-                <a href="#about">
-                    About
-                </a>
-            </li>
-
-            <li>
-                <a href="#contact">
-                    Contact
-                </a>
-            </li>
-
+        <ul class="nav-links d-flex items-center gap-8">
+            <li><a href="index.html" class="nav-link active text-14 font-medium">Home</a></li>
+            <li><a href="catalog.html" class="nav-link text-14 font-medium">Catalog</a></li>
+            <li><a href="#services" class="nav-link text-14 font-medium">Services</a></li>
+            <li><a href="#about" class="nav-link text-14 font-medium">About</a></li>
+            <li><a href="#contact" class="nav-link text-14 font-medium">Contact</a></li>
         </ul>
 
-        <a href="login.html" class="login-btn">
-            Login
-        </a>
-
+       <a href="auth/sign-in.html"
+   class="btn-login bg-primary text-white px-6 py-3 rounded-md text-14 font-semibold">
+    Login</a>
     </nav>
 
 </header>
@@ -91,35 +69,29 @@
 <!-- =========================
      HERO SECTION
 ========================= -->
+<section class="hero-bg d-flex items-center text-white">
 
-<section class="hero">
+    <div class="container w-100 mx-auto px-6 py-20">
 
-    <div class="hero-content">
+        <p class="text-navy text-14 font-bold mb-4 hero-kicker">BRITECH COLLEGE LIBRARY</p>
 
-        <p class="hero-small">
-            BRITECH COLLEGE LIBRARY
-        </p>
-
-        <h1>
+        <h1 class="text-white mb-6 hero-title">
             Discover Knowledge.<br>
             Explore. Learn. Grow.
         </h1>
 
-        <p>
+        <p class="text-accent mb-8 hero-desc">
             Explore books, academic resources, and learning materials
             available at the Britech College Library.
         </p>
 
-        <div class="hero-buttons">
-
-            <a href="catalog.html" class="primary-btn">
+        <div class="d-flex flex-wrap gap-4">
+            <a href="catalog.html" class="btn-primary d-inline-block bg-navy text-secondary px-6 py-4 rounded-md font-semibold">
                 Explore Catalog
             </a>
-
-            <a href="login.html" class="secondary-btn">
+            <a href="login.html" class="btn-secondary d-inline-block border-2 border-white text-white px-6 py-4 rounded-md font-semibold">
                 Library Login
             </a>
-
         </div>
 
     </div>
@@ -130,34 +102,21 @@
 <!-- =========================
      SEARCH SECTION
 ========================= -->
+<section class="bg-accent py-16 px-6 text-center">
 
-<section class="search-section">
+    <div class="mx-auto search-content">
 
-    <div class="search-content">
+        <h2 class="text-secondary text-3xl mb-2">Find a Book</h2>
+        <p class="text-gray mb-6">Search our library catalog for books and academic resources.</p>
 
-        <h2>
-            Find a Book
-        </h2>
-
-        <p>
-            Search our library catalog for books and academic resources.
-        </p>
-
-        <div class="search-box">
-
-            <input
-                type="text"
-                placeholder="Search by title, author, or ISBN..."
-                id="homeSearch">
-
-            <button id="homeSearchButton">
-
+        <div class="search-box d-flex bg-white radius-full p-1 shadow-md mx-auto">
+            <input type="text" placeholder="Search by title, author, or ISBN..." id="homeSearch"
+                class="flex-grow-1 border-0 px-5 py-4 text-sm radius-full">
+            <button id="homeSearchButton"
+                class="bg-navy text-secondary px-6 radius-full font-semibold border-0">
                 <i class="fa-solid fa-magnifying-glass"></i>
-
                 Search
-
             </button>
-
         </div>
 
     </div>
@@ -168,58 +127,30 @@
 <!-- =========================
      LIBRARY STATISTICS
 ========================= -->
+<section class="container mx-auto d-grid stats-grid gap-6 py-16 px-6">
 
-<section class="statistics">
-
-    <div class="stat-card">
-
-        <i class="fa-solid fa-book"></i>
-
-        <h2>3,520+</h2>
-
-        <p>
-            Books Available
-        </p>
-
+    <div class="stat-card text-center bg-white p-6 radius-lg shadow-sm">
+        <i class="fa-solid fa-book text-primary text-3xl mb-3"></i>
+        <h2 class="text-secondary text-3xl">3,520+</h2>
+        <p class="text-gray text-14">Books Available</p>
     </div>
 
-
-    <div class="stat-card">
-
-        <i class="fa-solid fa-users"></i>
-
-        <h2>1,400+</h2>
-
-        <p>
-            Registered Users
-        </p>
-
+    <div class="stat-card text-center bg-white p-6 radius-lg shadow-sm">
+        <i class="fa-solid fa-users text-primary text-3xl mb-3"></i>
+        <h2 class="text-secondary text-3xl">1,400+</h2>
+        <p class="text-gray text-14">Registered Users</p>
     </div>
 
-
-    <div class="stat-card">
-
-        <i class="fa-solid fa-book-open"></i>
-
-        <h2>180+</h2>
-
-        <p>
-            Monthly Borrowings
-        </p>
-
+    <div class="stat-card text-center bg-white p-6 radius-lg shadow-sm">
+        <i class="fa-solid fa-book-open text-primary text-3xl mb-3"></i>
+        <h2 class="text-secondary text-3xl">180+</h2>
+        <p class="text-gray text-14">Monthly Borrowings</p>
     </div>
 
-
-    <div class="stat-card">
-
-        <i class="fa-solid fa-building-columns"></i>
-
-        <h2>1</h2>
-
-        <p>
-            College Library
-        </p>
-
+    <div class="stat-card text-center bg-white p-6 radius-lg shadow-sm">
+        <i class="fa-solid fa-building-columns text-primary text-3xl mb-3"></i>
+        <h2 class="text-secondary text-3xl">1</h2>
+        <p class="text-gray text-14">College Library</p>
     </div>
 
 </section>
@@ -228,105 +159,42 @@
 <!-- =========================
      SERVICES
 ========================= -->
+<section class="bg-accent py-20 px-6" id="services">
 
-<section class="services" id="services">
-
-    <div class="section-heading">
-
-        <p>
-            OUR SERVICES
-        </p>
-
-        <h2>
-            Library Services
-        </h2>
-
-        <span>
-            Access the resources and services you need for your studies.
-        </span>
-
+    <div class="section-heading text-center mx-auto">
+        <p class="text-primary text-12 font-bold">OUR SERVICES</p>
+        <h2 class="text-secondary text-4xl my-2">Library Services</h2>
+        <span class="text-gray">Access the resources and services you need for your studies.</span>
     </div>
 
+    <div class="container services-grid d-grid gap-6 mx-auto mt-10">
 
-    <div class="service-grid">
-
-        <div class="service-card">
-
-            <i class="fa-solid fa-book"></i>
-
-            <h3>
-                Book Catalog
-            </h3>
-
-            <p>
-                Search and explore books and learning materials
-                available in the library.
-            </p>
-
-            <a href="catalog.html">
-                Browse Books →
-            </a>
-
+        <div class="service-card bg-white p-8 radius-lg shadow-sm">
+            <i class="fa-solid fa-book service-icon d-flex items-center justify-center bg-accent text-primary radius-md mb-5"></i>
+            <h3 class="text-secondary mb-3">Book Catalog</h3>
+            <p class="text-gray text-14 mb-5">Search and explore books and learning materials available in the library.</p>
+            <a href="catalog.html" class="text-primary text-14 font-semibold">Browse Books →</a>
         </div>
 
-
-        <div class="service-card">
-
-            <i class="fa-solid fa-arrow-right-arrow-left"></i>
-
-            <h3>
-                Borrow & Return
-            </h3>
-
-            <p>
-                Manage your library borrowing and returning
-                transactions.
-            </p>
-
-            <a href="login.html">
-                Access Account →
-            </a>
-
+        <div class="service-card bg-white p-8 radius-lg shadow-sm">
+            <i class="fa-solid fa-arrow-right-arrow-left service-icon d-flex items-center justify-center bg-accent text-primary radius-md mb-5"></i>
+            <h3 class="text-secondary mb-3">Borrow &amp; Return</h3>
+            <p class="text-gray text-14 mb-5">Manage your library borrowing and returning transactions.</p>
+            <a href="login.html" class="text-primary text-14 font-semibold">Access Account →</a>
         </div>
 
-
-        <div class="service-card">
-
-            <i class="fa-solid fa-magnifying-glass"></i>
-
-            <h3>
-                Resource Search
-            </h3>
-
-            <p>
-                Quickly find resources using title, author,
-                category, or ISBN.
-            </p>
-
-            <a href="catalog.html">
-                Search Resources →
-            </a>
-
+        <div class="service-card bg-white p-8 radius-lg shadow-sm">
+            <i class="fa-solid fa-magnifying-glass service-icon d-flex items-center justify-center bg-accent text-primary radius-md mb-5"></i>
+            <h3 class="text-secondary mb-3">Resource Search</h3>
+            <p class="text-gray text-14 mb-5">Quickly find resources using title, author, category, or ISBN.</p>
+            <a href="catalog.html" class="text-primary text-14 font-semibold">Search Resources →</a>
         </div>
 
-
-        <div class="service-card">
-
-            <i class="fa-solid fa-chart-column"></i>
-
-            <h3>
-                Library Records
-            </h3>
-
-            <p>
-                Authorized staff can manage library records,
-                inventory, and transactions.
-            </p>
-
-            <a href="login.html">
-                Staff Login →
-            </a>
-
+        <div class="service-card bg-white p-8 radius-lg shadow-sm">
+            <i class="fa-solid fa-chart-column service-icon d-flex items-center justify-center bg-accent text-primary radius-md mb-5"></i>
+            <h3 class="text-secondary mb-3">Library Records</h3>
+            <p class="text-gray text-14 mb-5">Authorized staff can manage library records, inventory, and transactions.</p>
+            <a href="login.html" class="text-primary text-14 font-semibold">Staff Login →</a>
         </div>
 
     </div>
@@ -337,43 +205,29 @@
 <!-- =========================
      ABOUT
 ========================= -->
+<section class="container mx-auto d-grid about-grid gap-16 items-center py-20 px-6" id="about">
 
-<section class="about" id="about">
-
-    <div class="about-image">
-
-        <img
-            src="images/library.jpg"
-            alt="Britech College Library">
-
+    <div>
+        <img src="images/library.jpg" alt="Britech College Library"
+            class="w-100 about-img radius-xl shadow-lg d-block">
     </div>
 
-    <div class="about-content">
-
-        <p class="section-label">
-            ABOUT THE LIBRARY
-        </p>
-
-        <h2>
-            Britech College Library
-        </h2>
-
-        <p>
+    <div>
+        <p class="text-primary text-12 font-bold">ABOUT THE LIBRARY</p>
+        <h2 class="text-secondary text-4xl my-3">Britech College Library</h2>
+        <p class="text-gray mb-4">
             The Britech College Library provides students, teachers,
             and staff with access to books, academic resources,
             and other learning materials.
         </p>
-
-        <p>
+        <p class="text-gray mb-4">
             Our library management system makes it easier to search
             for resources, monitor borrowing transactions, and
             manage library records.
         </p>
-
-        <a href="catalog.html" class="primary-btn">
+        <a href="catalog.html" class="btn-primary d-inline-block bg-navy text-secondary px-6 py-4 rounded-md font-semibold mt-3">
             Explore Our Catalog
         </a>
-
     </div>
 
 </section>
@@ -382,30 +236,16 @@
 <!-- =========================
      ANNOUNCEMENT
 ========================= -->
+<section class="bg-secondary text-white d-flex items-center gap-6 announcement">
 
-<section class="announcement">
-
-    <div>
-
+    <div class="announcement-icon flex-shrink-0 d-flex items-center justify-center bg-navy text-secondary radius-full">
         <i class="fa-solid fa-bullhorn"></i>
-
     </div>
 
     <div>
-
-        <p>
-            LIBRARY ANNOUNCEMENT
-        </p>
-
-        <h2>
-            Welcome to the Britech College Library Portal
-        </h2>
-
-        <span>
-            Check the catalog regularly for newly added books
-            and available learning resources.
-        </span>
-
+        <p class="text-navy text-12 font-bold">LIBRARY ANNOUNCEMENT</p>
+        <h2 class="text-xl my-1">Welcome to the Britech College Library Portal</h2>
+        <span class="text-14 announcement-text">Check the catalog regularly for newly added books and available learning resources.</span>
     </div>
 
 </section>
@@ -414,70 +254,32 @@
 <!-- =========================
      CONTACT
 ========================= -->
+<section class="bg-accent py-20 px-6" id="contact">
 
-<section class="contact" id="contact">
-
-    <div class="section-heading">
-
-        <p>
-            GET IN TOUCH
-        </p>
-
-        <h2>
-            Contact the Library
-        </h2>
-
-        <span>
-            Have questions? Contact the Britech College Library.
-        </span>
-
+    <div class="section-heading text-center mx-auto">
+        <p class="text-primary text-12 font-bold">GET IN TOUCH</p>
+        <h2 class="text-secondary text-4xl my-2">Contact the Library</h2>
+        <span class="text-gray">Have questions? Contact the Britech College Library.</span>
     </div>
 
+    <div class="contact-grid d-grid gap-6 mx-auto mt-10">
 
-    <div class="contact-grid">
-
-        <div class="contact-card">
-
-            <i class="fa-solid fa-location-dot"></i>
-
-            <h3>
-                Location
-            </h3>
-
-            <p>
-                Britech College
-            </p>
-
+        <div class="bg-white text-center p-8 radius-lg shadow-sm">
+            <i class="fa-solid fa-location-dot text-primary text-2xl mb-4"></i>
+            <h3 class="text-secondary mb-2">Location</h3>
+            <p class="text-gray text-14">Britech College</p>
         </div>
 
-
-        <div class="contact-card">
-
-            <i class="fa-solid fa-envelope"></i>
-
-            <h3>
-                Email
-            </h3>
-
-            <p>
-                library@britech.edu.ph
-            </p>
-
+        <div class="bg-white text-center p-8 radius-lg shadow-sm">
+            <i class="fa-solid fa-envelope text-primary text-2xl mb-4"></i>
+            <h3 class="text-secondary mb-2">Email</h3>
+            <p class="text-gray text-14">library@britech.edu.ph</p>
         </div>
 
-
-        <div class="contact-card">
-
-            <i class="fa-solid fa-phone"></i>
-
-            <h3>
-                Phone
-            </h3>
-
-            <p>
-                +63 912 345 6789
-            </p>
-
+        <div class="bg-white text-center p-8 radius-lg shadow-sm">
+            <i class="fa-solid fa-phone text-primary text-2xl mb-4"></i>
+            <h3 class="text-secondary mb-2">Phone</h3>
+            <p class="text-gray text-14">+63 912 345 6789</p>
         </div>
 
     </div>
@@ -488,76 +290,33 @@
 <!-- =========================
      FOOTER
 ========================= -->
+<footer class="footer-bg text-white">
 
-<footer>
-
-    <div class="footer-content">
+    <div class="container footer-grid d-grid gap-10 mx-auto py-16 px-6">
 
         <div>
-
-            <h2>
-                Britech College Library
-            </h2>
-
-            <p>
-                Your gateway to knowledge and learning resources.
-            </p>
-
+            <h2 class="mb-3">Britech College Library</h2>
+            <p class="text-14 footer-muted">Your gateway to knowledge and learning resources.</p>
         </div>
 
-
         <div>
-
-            <h3>
-                Quick Links
-            </h3>
-
-            <a href="index.html">
-                Home
-            </a>
-
-            <a href="catalog.html">
-                Catalog
-            </a>
-
-            <a href="login.html">
-                Login
-            </a>
-
+            <h3 class="text-navy mb-4">Quick Links</h3>
+            <a href="index.html" class="d-block text-14 footer-link mb-2">Home</a>
+            <a href="catalog.html" class="d-block text-14 footer-link mb-2">Catalog</a>
+            <a href="login.html" class="d-block text-14 footer-link mb-2">Login</a>
         </div>
 
-
         <div>
-
-            <h3>
-                Library
-            </h3>
-
-            <a href="#services">
-                Services
-            </a>
-
-            <a href="#about">
-                About
-            </a>
-
-            <a href="#contact">
-                Contact
-            </a>
-
+            <h3 class="text-navy mb-4">Library</h3>
+            <a href="#services" class="d-block text-14 footer-link mb-2">Services</a>
+            <a href="#about" class="d-block text-14 footer-link mb-2">About</a>
+            <a href="#contact" class="d-block text-14 footer-link mb-2">Contact</a>
         </div>
 
     </div>
 
-
-    <div class="footer-bottom">
-
-        <p>
-            © <span id="year">2026</span>
-            Britech College Library.
-            All Rights Reserved.
-        </p>
-
+    <div class="footer-bottom border-t text-center py-5 px-6">
+        <p class="text-12 footer-copy">© <span id="year">2026</span> Britech College Library. All Rights Reserved.</p>
     </div>
 
 </footer>
@@ -566,8 +325,7 @@
 <!-- =========================
      JAVASCRIPT
 ========================= -->
-
-<script src="js/script.js"></script>
+<script src="./assets/js/main.js"></script>
 
 </body>
 
