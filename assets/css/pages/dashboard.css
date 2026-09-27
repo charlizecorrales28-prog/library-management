@@ -91,6 +91,25 @@ body {
   flex-direction: column;
 
   gap: var(--space-4);
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+.sidebar-nav::-webkit-scrollbar {
+  width: 5px;
+}
+
+.sidebar-nav::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar-nav::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.18);
+  border-radius: var(--radius-full);
 }
 
 .sidebar-link {
@@ -113,6 +132,16 @@ body {
   transition:
     background-color var(--transition-fast) ease,
     color var(--transition-fast) ease;
+
+  width: 100%;
+
+  border: 0;
+  background: transparent;
+
+  cursor: pointer;
+
+  font-family: inherit;
+  text-align: left;
 }
 
 .sidebar-link i {
@@ -141,6 +170,91 @@ body {
 
 .logout-link {
   padding-left: 0;
+}
+
+/* =========================================================
+   SIDEBAR — COLLAPSIBLE GROUPS
+========================================================= */
+
+.sidebar-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* <details> / <summary> reset — no JS needed for expand/collapse */
+.sidebar-group-toggle {
+  display: flex;
+
+  list-style: none;
+}
+
+.sidebar-group-toggle::-webkit-details-marker {
+  display: none;
+}
+
+.sidebar-group-toggle::marker {
+  content: "";
+}
+
+.sidebar-group-toggle span {
+  flex: 1;
+}
+
+.sidebar-group[open] > .sidebar-group-toggle {
+  color: var(--color-white);
+}
+
+/* Closed by default — only the open group shows its links.
+   This is what actually makes the accordion behave (the old
+   unscoped `.sidebar-submenu { display: flex }` rule was
+   overriding the browser's native closed state, which is why
+   every group looked permanently expanded). */
+.sidebar-group:not([open]) .sidebar-submenu {
+  display: none;
+}
+
+.sidebar-group[open] .sidebar-submenu {
+  display: flex;
+  flex-direction: column;
+
+  margin-left: 30px;
+  padding-top: 4px;
+  padding-left: 13px;
+
+  border-left: var(--border-thin) solid rgba(255, 255, 255, 0.14);
+}
+
+.sidebar-sublink {
+  display: flex;
+  align-items: center;
+
+  padding: 9px var(--space-16);
+
+  margin-top: 2px;
+
+  border-radius: var(--radius-md);
+
+  color: rgba(255, 255, 255, 0.6);
+
+  font-size: 13px;
+  font-weight: var(--font-weight-medium);
+
+  text-decoration: none;
+
+  transition:
+    background-color var(--transition-fast) ease,
+    color var(--transition-fast) ease;
+}
+
+.sidebar-sublink:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--color-white);
+}
+
+.sidebar-sublink.active {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: var(--color-white);
+  font-weight: var(--font-weight-semibold);
 }
 
 /* =========================================================

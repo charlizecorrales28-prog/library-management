@@ -37,7 +37,7 @@
           </div>
         </div>
 
-        <nav class="sidebar-nav">
+        <nav class="sidebar-nav" id="sidebarNav">
           <a href="dashboard.html" class="sidebar-link active">
             <i class="fa-solid fa-gauge"></i>
             <span>Dashboard</span>
@@ -48,34 +48,85 @@
             <span>Students</span>
           </a>
 
-          <a href="dashboard.html" class="sidebar-link">
-            <i class="fa-solid fa-gauge"></i>
-            <span>School</span>
-          </a>
-          <a href="dashboard.html" class="ml-12 sidebar-link">
-            <span>Year</span>
-          </a>
-          <a href="dashboard.html" class="ml-12 sidebar-link">
-            <span>Section</span>
-          </a>
-          <a href="dashboard.html" class="ml-12 sidebar-link">
-            <span>Strand</span>
-          </a>
+          <!-- LIBRARY -->
+          <details class="sidebar-group">
+            <summary class="sidebar-link sidebar-group-toggle">
+              <i class="fa-solid fa-book"></i>
+              <span>Library</span>
+            </summary>
 
-          <a href="books.html" class="sidebar-link">
-            <i class="fa-solid fa-book"></i>
-            <span>Books</span>
-          </a>
+            <div class="sidebar-submenu">
+              <a href="books.html" class="sidebar-sublink">
+                <span>Books</span>
+              </a>
+              <a href="categories.html" class="sidebar-sublink">
+                <span>Categories</span>
+              </a>
+            </div>
+          </details>
 
-          <a href="borrow-return.html" class="sidebar-link">
-            <i class="fa-solid fa-right-left"></i>
-            <span>Borrow / Return</span>
-          </a>
+          <!-- SCHOOL -->
+          <details class="sidebar-group">
+            <summary class="sidebar-link sidebar-group-toggle">
+              <i class="fa-solid fa-school"></i>
+              <span>School</span>
+            </summary>
 
-          <a href="reports.html" class="sidebar-link">
-            <i class="fa-solid fa-chart-column"></i>
-            <span>Reports</span>
-          </a>
+            <div class="sidebar-submenu">
+              <a href="school-year.html" class="sidebar-sublink">
+                <span>Year</span>
+              </a>
+              <a href="section.html" class="sidebar-sublink">
+                <span>Section</span>
+              </a>
+              <a href="strand.html" class="sidebar-sublink">
+                <span>Strand</span>
+              </a>
+            </div>
+          </details>
+
+          <!-- TRANSACTIONS -->
+          <details class="sidebar-group">
+            <summary class="sidebar-link sidebar-group-toggle">
+              <i class="fa-solid fa-right-left"></i>
+              <span>Transactions</span>
+            </summary>
+
+            <div class="sidebar-submenu">
+              <a href="borrow.html" class="sidebar-sublink">
+                <span>Borrow</span>
+              </a>
+              <a href="return.html" class="sidebar-sublink">
+                <span>Return</span>
+              </a>
+              <a href="fines.html" class="sidebar-sublink">
+                <span>Fines</span>
+              </a>
+              <a href="reservations.html" class="sidebar-sublink">
+                <span>Reservations</span>
+              </a>
+            </div>
+          </details>
+
+          <!-- USERS -->
+          <details class="sidebar-group">
+            <summary class="sidebar-link sidebar-group-toggle">
+              <i class="fa-solid fa-users"></i>
+              <span>Users</span>
+            </summary>
+
+            <div class="sidebar-submenu">
+              <a href="staffs.html" class="sidebar-sublink">
+                <span>Staffs</span>
+              </a>
+              <a href="roles.html" class="sidebar-sublink">
+                <span>Roles</span>
+              </a>
+              <a href="reports.html" class="sidebar-sublink">
+                <span>Reports</span>
+              </a>
+            </div>
+          </details>
 
           <a href="settings.html" class="sidebar-link">
             <i class="fa-solid fa-gear"></i>
