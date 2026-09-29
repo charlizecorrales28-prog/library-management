@@ -13,16 +13,21 @@
     <section class="p-10 w-512 bg-accent rounded-lg">
       <div class="mb-8">
         <a class="btn-ghost" href="../index.html">Return</a>
+
         <p class="text-primary text-12 text-center font-bold">WELCOME BACK</p>
+
         <h1 class="text-secondary text-3xl text-center my-2">Library Sign In</h1>
+
         <p class="text-gray text-14 text-center">Sign in to manage your borrowings and account.</p>
       </div>
 
-      <form id="signInForm" class="d-flex flex-column gap-5" novalidate>
+      <form id="signInForm" class="d-flex flex-column gap-5" action="../pages/dashboard.html">
         <div>
           <label for="signIn" class="mb-2 label">Username</label>
+
           <div class="pl-3 d-flex flex-row items-center bg-light gap-1">
             <i class="fa-solid fa-envelope text-primary text-md"></i>
+
             <input
               type="text"
               id="signIn"
@@ -35,9 +40,11 @@
         </div>
 
         <div>
-          <label for="loginPassword" class="mb-2 label">Password</label>
+          <label for="password" class="mb-2 label">Password</label>
+
           <div class="pl-3 d-flex flex-row items-center bg-light gap-2">
             <i class="fa-solid fa-lock text-primary text-md"></i>
+
             <input
               type="password"
               id="password"
@@ -54,7 +61,8 @@
             <input type="checkbox" id="rememberMe" name="rememberMe" />
             Remember me
           </label>
-          <a href="#" class="text-primary font-semibold">Forgot password?</a>
+
+          <a href="#" class="text-primary font-semibold"> Forgot password? </a>
         </div>
 
         <button type="submit" class="btn-primary btn-white">Sign In</button>
@@ -66,7 +74,7 @@
 
       <p class="text-center text-14 text-gray">
         Don't have an account?
-        <a href="register.html" class="text-primary font-semibold">Create one</a>
+        <a href="register.html" class="text-primary font-semibold"> Create one </a>
       </p>
     </section>
   </body>
