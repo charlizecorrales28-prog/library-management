@@ -17,9 +17,6 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
   </head>
 
   <body>
@@ -29,7 +26,7 @@
       ========================== -->
       <aside class="sidebar">
         <div class="sidebar-brand">
-          <img src="../assets/images/logo/britech-logo (1).png" alt="Britech College Logo" />
+          <img src="../assets/images/logo/britech-logo.png" alt="Britech College Logo" />
 
           <div>
             <h2>BRITECH LIBRARY</h2>
@@ -48,18 +45,23 @@
             <span>Students</span>
           </a>
 
-          <!-- LIBRARY -->
+          <a href="accounts.html" class="sidebar-link">
+            <i class="fa-solid fa-user-shield"></i>
+            <span>Accounts</span>
+          </a>
+
+          <!-- BOOKS -->
           <details class="sidebar-group">
             <summary class="sidebar-link sidebar-group-toggle">
               <i class="fa-solid fa-book"></i>
-              <span>Library</span>
+              <span>Books</span>
             </summary>
 
             <div class="sidebar-submenu">
-              <a href="books.html" class="sidebar-sublink">
+              <a href="books/books.html" class="sidebar-sublink">
                 <span>Books</span>
               </a>
-              <a href="categories.html" class="sidebar-sublink">
+              <a href="books/categories.html" class="sidebar-sublink">
                 <span>Categories</span>
               </a>
             </div>
@@ -73,13 +75,13 @@
             </summary>
 
             <div class="sidebar-submenu">
-              <a href="school-year.html" class="sidebar-sublink">
+              <a href="school/school-year.html" class="sidebar-sublink">
                 <span>Year</span>
               </a>
-              <a href="section.html" class="sidebar-sublink">
+              <a href="school/section.html" class="sidebar-sublink">
                 <span>Section</span>
               </a>
-              <a href="strand.html" class="sidebar-sublink">
+              <a href="school/strand.html" class="sidebar-sublink">
                 <span>Strand</span>
               </a>
             </div>
@@ -93,45 +95,46 @@
             </summary>
 
             <div class="sidebar-submenu">
-              <a href="borrow.html" class="sidebar-sublink">
+              <a href="transactions/borrow.html" class="sidebar-sublink">
                 <span>Borrow</span>
               </a>
-              <a href="return.html" class="sidebar-sublink">
+              <a href="transactions/return.html" class="sidebar-sublink">
                 <span>Return</span>
               </a>
-              <a href="fines.html" class="sidebar-sublink">
+              <a href="transactions/fines.html" class="sidebar-sublink">
                 <span>Fines</span>
               </a>
-              <a href="reservations.html" class="sidebar-sublink">
+              <a href="transactions/reservations.html" class="sidebar-sublink">
                 <span>Reservations</span>
               </a>
             </div>
           </details>
 
-          <!-- USERS -->
+          <!-- REPORTS -->
           <details class="sidebar-group">
             <summary class="sidebar-link sidebar-group-toggle">
-              <i class="fa-solid fa-users"></i>
-              <span>Users</span>
+              <i class="fa-solid fa-chart-column"></i>
+              <span>Reports</span>
             </summary>
 
             <div class="sidebar-submenu">
-              <a href="staffs.html" class="sidebar-sublink">
-                <span>Staffs</span>
+              <a href="reports/borrowing.html" class="sidebar-sublink">
+                <span>Borrowing</span>
               </a>
-              <a href="roles.html" class="sidebar-sublink">
-                <span>Roles</span>
+              <a href="reports/returns.html" class="sidebar-sublink">
+                <span>Returns</span>
               </a>
-              <a href="reports.html" class="sidebar-sublink">
-                <span>Reports</span>
+              <a href="reports/fines.html" class="sidebar-sublink">
+                <span>Fines</span>
+              </a>
+              <a href="reports/inventory.html" class="sidebar-sublink">
+                <span>Inventory</span>
+              </a>
+              <a href="reports/students.html" class="sidebar-sublink">
+                <span>Students</span>
               </a>
             </div>
           </details>
-
-          <a href="settings.html" class="sidebar-link">
-            <i class="fa-solid fa-gear"></i>
-            <span>Settings</span>
-          </a>
         </nav>
 
         <div class="sidebar-logout">
