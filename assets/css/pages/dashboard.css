@@ -8,7 +8,8 @@
 @import url("../layout/main-container.css");
 @import url("../layout/footer.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css");
-
+@import url("../component/animations/animations.css");
+@import url("../layout/aside.css");
 /* =========================================================
    DASHBOARD
 ========================================================= */
@@ -25,109 +26,6 @@ body {
 .main-area {
   margin-left: 272px;
   min-height: 100vh;
-}
-
-/* =========================================================
-   SIDEBAR
-========================================================= */
-
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-
-  width: 272px;
-  height: 100vh;
-
-  background: #5b0d2b;
-  color: white;
-
-  display: flex;
-  flex-direction: column;
-
-  z-index: 1000;
-}
-
-.sidebar-brand {
-  min-height: 90px;
-}
-
-.sidebar-brand img {
-  width: 48px;
-  height: 48px;
-  object-fit: contain;
-}
-
-.sidebar-brand h2 {
-  margin: 0;
-  color: white;
-  font-size: 14px;
-}
-
-.sidebar-brand p {
-  margin: 2px 0 0;
-  color: #e8cbd5;
-  font-size: 10px;
-}
-
-.sidebar-nav {
-  flex-direction: column;
-  flex: 1;
-  overflow-y: auto;
-}
-
-.sidebar-link {
-  width: 100%;
-  color: #f3dce4;
-  text-decoration: none;
-}
-
-.sidebar-link:hover {
-  background: rgba(255, 255, 255, 0.08);
-  color: white;
-}
-
-.sidebar-link.active {
-  background: #8e2345;
-  color: white;
-}
-
-.sidebar-group {
-  width: 100%;
-}
-
-.sidebar-group summary {
-  list-style: none;
-  cursor: pointer;
-}
-
-.sidebar-group summary::-webkit-details-marker {
-  display: none;
-}
-
-.sidebar-submenu {
-  margin-left: 26px;
-  padding-left: 12px;
-
-  border-left: 1px solid rgba(255, 255, 255, 0.15);
-
-  display: flex;
-  flex-direction: column;
-}
-
-.sidebar-sublink {
-  color: #dcb7c5;
-  text-decoration: none;
-  padding: 8px 12px;
-  font-size: 12px;
-}
-
-.sidebar-sublink:hover {
-  color: white;
-}
-
-.sidebar-logout {
-  flex-shrink: 0;
 }
 
 /* =========================================================
