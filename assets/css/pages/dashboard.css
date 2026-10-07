@@ -9,16 +9,8 @@
 
 body {
   background-color: var(--color-accent);
-}
-
-/* =========================================================
-   APP SHELL
-========================================================= */
-
-.app-shell {
-  display: flex;
+  margin: 0;
   min-height: 100vh;
-  width: 100%;
 }
 
 /* =========================================================
@@ -33,13 +25,16 @@ body {
   background-color: var(--color-secondary);
   color: var(--color-white);
 
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
 
   height: 100vh;
 
   display: flex;
   flex-direction: column;
+
+  z-index: 1000;
 }
 
 .sidebar-brand {
@@ -117,13 +112,6 @@ body {
 
   font-family: inherit;
   text-align: left;
-}
-
-.sidebar-icon {
-  width: 18px;
-  height: 18px;
-
-  flex-shrink: 0;
 }
 
 .sidebar-link:hover {
@@ -230,9 +218,10 @@ body {
 ========================================================= */
 
 .main-area {
-  flex: 1;
+  margin-left: 260px;
   min-width: 0;
-
+  min-height: 100vh;
+  width: calc(100% - 260px);
   display: flex;
   flex-direction: column;
 }
@@ -292,10 +281,6 @@ body {
   border-color: var(--color-primary);
 
   box-shadow: 0 0 0 3px rgba(127, 29, 58, 0.08);
-}
-
-.dashboard-search-shell > i {
-  flex-shrink: 0;
 }
 
 .search-input {
@@ -1504,11 +1489,6 @@ button:disabled {
   .dashboard-search-shell {
     padding: 9px 12px;
   }
-
-  .dashboard-search-shell > i {
-    font-size: 13px;
-  }
-
   .search-input {
     font-size: 12px;
   }
