@@ -1,0 +1,325 @@
+/* =========================================================
+   BRITECH LIBRARY
+   ACCOUNTS PAGE STYLES
+========================================================= */
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.accounts-header {
+  gap: var(--space-20);
+}
+
+.accounts-header h2 {
+  color: var(--color-dark);
+}
+
+.accounts-header p {
+  color: var(--color-gray);
+}
+
+/* =========================================================
+   ADD ACCOUNT CARD
+========================================================= */
+
+.add-account-card {
+  background-color: var(--color-white);
+}
+
+.add-account-card .card-header {
+  border-bottom: var(--border-thin) solid var(--color-light-gray);
+  padding-bottom: var(--space-16);
+}
+
+.add-account-card .card-header h3 {
+  color: var(--color-dark);
+}
+
+.add-account-card .card-header p {
+  color: var(--color-gray);
+}
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.form-group {
+  margin-bottom: var(--space-16);
+}
+
+.form-group input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: var(--space-12);
+
+  border: var(--border-thin) solid var(--color-light-gray);
+  border-radius: var(--radius-md);
+
+  background-color: var(--color-white);
+  color: var(--color-dark);
+
+  font-family: inherit;
+  font-size: var(--font-size-14);
+
+  outline: none;
+
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+/* =========================================================
+   INPUT PLACEHOLDER
+========================================================= */
+
+.form-group input::placeholder {
+  color: var(--color-light-gray);
+}
+
+/* =========================================================
+   INPUT HOVER
+========================================================= */
+
+.form-group input:hover {
+  border-color: var(--color-gray);
+}
+
+/* =========================================================
+   INPUT FOCUS
+========================================================= */
+
+.form-group input:focus {
+  border-color: var(--color-primary);
+
+  box-shadow: 0 0 0 3px var(--color-primary-50);
+}
+
+/* =========================================================
+   FORM HELP TEXT
+========================================================= */
+
+.form-group small {
+  color: var(--color-gray);
+}
+
+/* =========================================================
+   FORM ACTIONS
+========================================================= */
+
+.form-actions {
+  margin-top: var(--space-20);
+}
+
+/* =========================================================
+   CANCEL BUTTON
+========================================================= */
+
+#cancelAccountButton {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+
+  border: var(--border-thin) solid var(--color-light-gray);
+}
+
+#cancelAccountButton:hover {
+  background-color: var(--color-light-gray);
+}
+
+/* =========================================================
+   ACCOUNTS TABLE CARD
+========================================================= */
+
+.accounts-table-card {
+  background-color: var(--color-white);
+  overflow: hidden;
+}
+
+.accounts-table-card .card-header {
+  border-bottom: var(--border-thin) solid var(--color-light-gray);
+
+  padding-bottom: var(--space-16);
+}
+
+.accounts-table-card .card-header h3 {
+  color: var(--color-dark);
+}
+
+.accounts-table-card .card-header p {
+  color: var(--color-gray);
+}
+
+/* =========================================================
+   TABLE CONTAINER
+========================================================= */
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.accounts-table {
+  border-collapse: collapse;
+  min-width: 650px;
+}
+
+/* =========================================================
+   TABLE HEADER
+========================================================= */
+
+.accounts-table th {
+  padding: var(--space-12);
+
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+
+  border-bottom: 2px solid var(--color-primary);
+
+  font-size: var(--font-size-14);
+  font-weight: var(--font-weight-semibold);
+
+  text-align: left;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   TABLE BODY
+========================================================= */
+
+.accounts-table td {
+  padding: var(--space-12);
+
+  border-bottom: var(--border-thin) solid var(--color-light-gray);
+
+  color: var(--color-dark);
+
+  font-size: var(--font-size-14);
+
+  vertical-align: middle;
+}
+
+/* =========================================================
+   TABLE ROW HOVER
+========================================================= */
+
+.accounts-table tbody tr {
+  transition: background-color var(--transition-fast);
+}
+
+.accounts-table tbody tr:hover {
+  background-color: var(--color-primary-50);
+}
+
+/* =========================================================
+   LAST TABLE ROW
+========================================================= */
+
+.accounts-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* =========================================================
+   ACTION COLUMN
+========================================================= */
+
+.accounts-table td:last-child {
+  white-space: nowrap;
+}
+
+/* =========================================================
+   SMALL BUTTON
+========================================================= */
+
+.btn-small {
+  padding: 7px 12px;
+  font-size: var(--font-size-12);
+}
+
+/* =========================================================
+   DELETE BUTTON
+========================================================= */
+
+.btn-danger {
+  background-color: #b42318;
+  color: var(--color-white);
+
+  border: var(--border-thin) solid #b42318;
+}
+
+.btn-danger:hover {
+  background-color: #912018;
+  border-color: #912018;
+}
+
+/* =========================================================
+   ADD ACCOUNT BUTTON
+========================================================= */
+
+#addAccountButton {
+  white-space: nowrap;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+  .accounts-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-12);
+  }
+
+  .accounts-header .btn {
+    width: 100%;
+  }
+
+  .add-account-card,
+  .accounts-table-card {
+    padding: var(--space-16);
+  }
+
+  .form-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .form-actions .btn {
+    width: 100%;
+  }
+
+  .accounts-table {
+    min-width: 650px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .accounts-header h2 {
+    font-size: var(--font-size-16);
+  }
+
+  .accounts-header p {
+    font-size: var(--font-size-12);
+  }
+
+  .add-account-card,
+  .accounts-table-card {
+    padding: var(--space-12);
+  }
+
+  .accounts-table th,
+  .accounts-table td {
+    padding: var(--space-8);
+    font-size: var(--font-size-12);
+  }
+}

@@ -2,14 +2,209 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Accounts | Britech College Library</title>
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="../assets/css/style.css" />
 
-    <!-- Dashboard CSS -->
-    <link rel="stylesheet" href="../assets/css/style.css" />
+    <!-- Accounts CSS -->
+    <link rel="stylesheet" href="../assets/css/pages/accounts.css" />
   </head>
-  <body></body>
+
+  <body>
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+      <!-- Sidebar Brand -->
+      <div class="sidebar-brand">
+        <a href="dashboard.html">
+          <img src="../assets/images/logo/britech-logo.png" alt="Britech College Library Logo" />
+
+          <div>
+            <h2>Britech Library</h2>
+
+            <p>COLLEGE LIBRARY</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Sidebar Navigation -->
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="sidebar-link"> Dashboard </a>
+
+        <a href="books.html" class="sidebar-link"> Books </a>
+
+        <a href="borrow-return.html" class="sidebar-link"> Borrow / Return </a>
+
+        <a href="accounts.html" class="sidebar-link active"> Accounts </a>
+      </nav>
+
+      <!-- Sidebar Logout -->
+      <div class="sidebar-logout">
+        <a href="../index.html" class="sidebar-link logout-link"> Logout </a>
+      </div>
+    </aside>
+
+    <!-- =====================================================
+         MAIN AREA
+    ====================================================== -->
+
+    <main class="main-area">
+      <!-- ===================================================
+           TOPBAR
+      ==================================================== -->
+
+      <header class="topbar">
+        <div>
+          <h1>Accounts</h1>
+
+          <p>Manage library accounts</p>
+        </div>
+      </header>
+
+      <!-- ===================================================
+           PAGE CONTENT
+      ==================================================== -->
+
+      <section class="page-content">
+        <!-- =================================================
+             PAGE HEADER
+        ================================================== -->
+
+        <div class="accounts-header d-flex justify-between items-center border-b pb-3 mb-4">
+          <div>
+            <h2 class="text-xl font-bold mb-1">Library Accounts</h2>
+
+            <p class="text-sm text-gray">View and manage user accounts.</p>
+          </div>
+
+          <button type="button" class="btn btn-primary" id="addAccountButton">Add Account</button>
+        </div>
+
+        <!-- =================================================
+             ADD ACCOUNT FORM
+        ================================================== -->
+
+        <div class="card add-account-card border rounded-md p-4 mb-4" id="addAccountForm">
+          <!-- Form Header -->
+          <div class="card-header border-0 p-0 mb-4">
+            <h3 class="text-lg font-bold mb-1">Add Account</h3>
+
+            <p class="text-sm text-gray">Create a new library account.</p>
+          </div>
+
+          <!-- Account Form -->
+          <form action="" method="POST">
+            <!-- Username -->
+            <div class="form-group">
+              <label for="username" class="d-block text-sm font-semibold mb-2"> Username </label>
+
+              <input type="text" id="username" name="username" maxlength="12" required placeholder="Enter username" />
+
+              <small class="d-block text-xs text-gray mt-1"> Maximum of 12 characters. </small>
+            </div>
+
+            <!-- Password -->
+            <div class="form-group">
+              <label for="password" class="d-block text-sm font-semibold mb-2"> Password </label>
+
+              <input type="password" id="password" name="password" required placeholder="Enter password" />
+            </div>
+
+            <!-- Confirm Password -->
+            <div class="form-group">
+              <label for="confirm_password" class="d-block text-sm font-semibold mb-2"> Confirm Password </label>
+
+              <input
+                type="password"
+                id="confirm_password"
+                name="confirm_password"
+                required
+                placeholder="Confirm password"
+              />
+            </div>
+
+            <!-- Form Buttons -->
+            <div class="form-actions d-flex gap-2">
+              <button type="submit" class="btn btn-primary">Add Account</button>
+
+              <button type="button" class="btn btn-secondary" id="cancelAccountButton">Cancel</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- =================================================
+             ACCOUNTS TABLE
+        ================================================== -->
+
+        <div class="card accounts-table-card border rounded-md p-4">
+          <!-- Table Header -->
+          <div class="card-header border-0 p-0 mb-4">
+            <h3 class="text-lg font-bold mb-1">Accounts</h3>
+
+            <p class="text-sm text-gray">Registered library accounts.</p>
+          </div>
+
+          <!-- Table -->
+          <div class="table-container overflow-x">
+            <table class="accounts-table w-100">
+              <!-- Table Head -->
+              <thead>
+                <tr>
+                  <th>ID</th>
+
+                  <th>Username</th>
+
+                  <th>Created At</th>
+
+                  <th>Updated At</th>
+
+                  <th>Actions</th>
+                </tr>
+              </thead>
+
+              <!-- Table Body -->
+              <tbody>
+                <!-- Admin Account -->
+                <tr>
+                  <td>1</td>
+
+                  <td>admin</td>
+
+                  <td>2026-10-07</td>
+
+                  <td>2026-10-07</td>
+
+                  <td>
+                    <div class="d-flex gap-2">
+                      <!-- Edit -->
+                      <button type="button" class="btn btn-small">Edit</button>
+
+                      <!-- Delete -->
+                      <button type="button" class="btn btn-small btn-danger">Delete</button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <!-- Main JavaScript -->
+    <script src="../assets/js/main.js"></script>
+
+    <!-- Accounts JavaScript -->
+    <script src="../assets/js/pages/accounts.js"></script>
+  </body>
 </html>
