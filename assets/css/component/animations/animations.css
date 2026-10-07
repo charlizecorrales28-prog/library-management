@@ -1,0 +1,274 @@
+/* =========================================================
+   ANIMATIONS
+   Britech College Library
+========================================================= */
+
+/* =========================================================
+   PAGE FADE IN
+========================================================= */
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.main-area {
+  animation: pageFadeIn 0.45s ease-out;
+}
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+@keyframes sidebarItemIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.sidebar-link,
+.sidebar-group,
+.sidebar-logout {
+  animation: sidebarItemIn 0.35s ease-out both;
+}
+
+/* =========================================================
+   TOPBAR
+========================================================= */
+
+@keyframes topbarIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.topbar {
+  animation: topbarIn 0.4s ease-out;
+}
+
+/* =========================================================
+   STATISTICS CARDS
+========================================================= */
+
+@keyframes cardIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dashboard-stat-card {
+  animation: cardIn 0.45s ease-out both;
+}
+
+.dashboard-stat-card:nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+.dashboard-stat-card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.dashboard-stat-card:nth-child(3) {
+  animation-delay: 0.15s;
+}
+
+.dashboard-stat-card:nth-child(4) {
+  animation-delay: 0.2s;
+}
+
+/* =========================================================
+   QUICK ACTIONS
+========================================================= */
+
+.quick-action {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.quick-action:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================================================
+   BUTTON HOVER
+========================================================= */
+
+button,
+.button,
+.btn {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+button:hover,
+.button:hover,
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   SIDEBAR HOVER
+========================================================= */
+
+.sidebar-link,
+.sidebar-sublink {
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    padding-left 0.2s ease;
+}
+
+.sidebar-link:hover {
+  padding-left: 22px;
+}
+
+.sidebar-sublink:hover {
+  padding-left: 16px;
+}
+
+/* =========================================================
+   NOTIFICATION
+========================================================= */
+
+@keyframes notificationPulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.12);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.notification-dot {
+  animation: notificationPulse 1.8s ease-in-out infinite;
+}
+
+/* =========================================================
+   NOTIFICATION DROPDOWN
+========================================================= */
+
+@keyframes dropdownIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.notification-dropdown.show {
+  animation: dropdownIn 0.2s ease-out;
+}
+
+/* =========================================================
+   AVATAR
+========================================================= */
+
+.avatar-circle {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.avatar-circle:hover {
+  transform: scale(1.05);
+  box-shadow: 0 3px 10px rgba(91, 13, 43, 0.2);
+}
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.search-input {
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.search-input:focus {
+  background: white;
+  box-shadow: 0 0 0 2px rgba(148, 31, 67, 0.15);
+}
+
+/* =========================================================
+   PERIOD FILTER
+========================================================= */
+
+.dashboard-period {
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.dashboard-period:hover {
+  background: #f8f8f8;
+  color: #5b0d2b;
+}
+
+/* =========================================================
+   TABLE ROWS
+========================================================= */
+
+tbody tr {
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+tbody tr:hover {
+  background: #fafafa;
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

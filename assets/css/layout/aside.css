@@ -1,0 +1,143 @@
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 272px;
+  height: 100vh;
+
+  background: #5b0d2b;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+
+  z-index: 1000;
+
+  /* REMOVE HORIZONTAL SCROLL */
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.sidebar-brand {
+  min-height: 90px;
+  flex-shrink: 0;
+}
+
+.sidebar-brand img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.sidebar-brand h2 {
+  margin: 0;
+  color: white;
+  font-size: 14px;
+}
+
+.sidebar-brand p {
+  margin: 2px 0 0;
+  color: #e8cbd5;
+  font-size: 10px;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
+
+  /* ALLOW VERTICAL SCROLL ONLY */
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  width: 100%;
+  min-width: 0;
+}
+
+.sidebar-link {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+
+  color: #f3dce4;
+  text-decoration: none;
+
+  /* PREVENT CONTENT FROM MAKING NAV WIDER */
+  overflow: hidden;
+}
+
+.sidebar-link:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+}
+
+.sidebar-link.active {
+  background: #8e2345;
+  color: white;
+}
+
+.sidebar-group {
+  width: 100%;
+  min-width: 0;
+}
+
+.sidebar-group summary {
+  list-style: none;
+  cursor: pointer;
+
+  /* IMPORTANT */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.sidebar-group summary::-webkit-details-marker {
+  display: none;
+}
+
+.sidebar-submenu {
+  margin-left: 26px;
+  padding-left: 12px;
+
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+
+  display: flex;
+  flex-direction: column;
+
+  /* PREVENT SUBMENU FROM OVERFLOWING */
+  max-width: calc(100% - 38px);
+  box-sizing: border-box;
+
+  overflow-x: hidden;
+}
+
+.sidebar-sublink {
+  color: #dcb7c5;
+  text-decoration: none;
+  padding: 8px 12px;
+  font-size: 12px;
+
+  /* PREVENT LONG TEXT FROM CREATING HORIZONTAL SCROLL */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  box-sizing: border-box;
+}
+
+.sidebar-sublink:hover {
+  color: white;
+}
+
+.sidebar-logout {
+  flex-shrink: 0;
+
+  /* KEEP LOGOUT INSIDE SIDEBAR */
+  width: 100%;
+  box-sizing: border-box;
+}
