@@ -1,112 +1,141 @@
-.search-input {
-  border: 0 !important;
-  outline: none !important;
-  background: transparent !important;
-  box-shadow: none !important;
+@import url("dashboard.css");
+
+.page-heading {
+  justify-content: space-between;
+  gap: 16px;
 }
-.search-shell,
-.d-flex.items-center.gap-3.bg-white.border.border-light-gray.radius-md.px-4.py-3 {
-  border: 0 !important;
-  background: transparent !important;
-  box-shadow: none !important;
+
+.page-title {
+  margin: 0 0 4px;
+  color: #5b0d2b;
+  font-size: 22px;
+  font-weight: 700;
 }
-button,
-a,
-.icon-btn,
-.page-btn {
-  cursor: pointer;
+
+.page-subtitle {
+  margin: 0;
+  color: #777;
+  font-size: 13px;
 }
-button:disabled {
-  opacity: 0.45;
-  cursor: not-allowed;
-}
-.app-toast {
-  position: fixed;
-  right: 24px;
-  bottom: 24px;
-  z-index: 9999;
-  background: #17324d;
-  color: #fff;
-  padding: 12px 18px;
-  border-radius: 8px;
-  font-size: 14px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
-}
-.app-modal-backdrop {
-  position: fixed;
-  inset: 0;
-  background: rgba(10, 25, 40, 0.48);
-  z-index: 9998;
-  display: flex;
+
+.books-add-button {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  padding: 20px;
-}
-.app-modal {
-  background: #fff;
-  border-radius: 14px;
-  width: min(560px, 100%);
-  max-height: 90vh;
-  overflow: auto;
-  padding: 24px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
-}
-.app-modal h3 {
-  margin: 0 0 18px;
-  color: #17324d;
-  font-size: 20px;
-}
-.app-form-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-}
-.app-form-grid .full {
-  grid-column: 1/-1;
-}
-.app-modal label {
-  display: block;
+  gap: 8px;
+  height: 40px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 10px;
+  background: #941f43;
+  color: white;
   font-size: 13px;
   font-weight: 600;
-  color: #17324d;
-  margin-bottom: 6px;
-}
-.app-modal input,
-.app-modal select {
-  width: 100%;
-  padding: 10px 12px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  outline: none;
-}
-.app-modal-actions {
-  display: flex;
-  gap: 10px;
-  justify-content: flex-end;
-  margin-top: 20px;
-}
-.app-modal-actions button {
-  padding: 10px 16px;
-  border-radius: 8px;
-  border: 0;
-  font-weight: 600;
-}
-.app-modal .primary {
-  background: var(--color-primary);
-  color: #fff;
-}
-.app-modal .secondary {
-  background: #fff;
-  color: #17324d;
-  border: 1px solid #ddd !important;
-}
-.clickable-card {
   cursor: pointer;
-  transition:
-    transform 0.15s,
-    box-shadow 0.15s;
+  transition: background 0.2s ease;
 }
-.clickable-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+
+.books-add-button:hover {
+  background: #5b0d2b;
+}
+
+.books-card {
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.books-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.books-filter-search {
+  position: relative;
+  flex: 1 1 260px;
+  max-width: 360px;
+}
+
+.books-filter-search i {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 13px;
+  pointer-events: none;
+}
+
+.books-filter-search input,
+.books-select {
+  height: 40px;
+  box-sizing: border-box;
+  border: 1px solid #e5e5ea;
+  border-radius: 10px;
+  background: #f5f5f7;
+  font-size: 13px;
+  color: #333;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.books-filter-search input {
+  width: 100%;
+  padding: 0 14px 0 38px;
+}
+
+.books-select {
+  padding: 0 12px;
+}
+
+.books-filter-search input:focus,
+.books-select:focus {
+  background: white;
+  border-color: #941f43;
+  box-shadow: 0 0 0 3px rgba(148, 31, 67, 0.12);
+}
+
+.books-table-wrap {
+  overflow-x: auto;
+}
+
+.books-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.books-table th {
+  padding: 14px 20px;
+  background: #fafafa;
+  color: #5b0d2b;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.books-table td {
+  padding: 14px 20px;
+  border-top: 1px solid #f0f0f0;
+  color: #333;
+}
+
+.books-table tbody tr:hover {
+  background: #fff8f0;
+}
+
+.books-empty-row td {
+  padding: 32px 20px;
+  color: #777;
+  text-align: center;
 }
