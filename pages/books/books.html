@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Books | Britech College Library</title>
+
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/css/pages/books.css" />
+  </head>
+
+  <body>
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-brand d-flex items-center gap-3 py-6 px-5">
+        <img src="../../assets/images/logo/britech-logo.png" alt="Britech College Logo" />
+
+        <div>
+          <h2>BRITECH LIBRARY</h2>
+          <p>MANAGEMENT SYSTEM</p>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav d-flex py-4 px-3 gap-1" id="sidebarNav">
+        <a
+          href="../dashboard.html"
+          class="sidebar-link d-flex items-center gap-3 px-4 py-3 radius-md text-14 font-medium"
+        >
+          <i class="fa-solid fa-chart-pie"></i>
+          <span>Dashboard</span>
+        </a>
+
+        <a
+          href="../students.html"
+          class="sidebar-link d-flex items-center gap-3 px-4 py-3 radius-md text-14 font-medium"
+        >
+          <i class="fa-solid fa-user-graduate"></i>
+          <span>Students</span>
+        </a>
+
+        <a
+          href="../accounts.html"
+          class="sidebar-link d-flex items-center gap-3 px-4 py-3 radius-md text-14 font-medium"
+        >
+          <i class="fa-solid fa-users-gear"></i>
+          <span>Accounts</span>
+        </a>
+
+        <!-- BOOKS -->
+        <details class="sidebar-group" open>
+          <summary
+            class="sidebar-link sidebar-group-toggle active d-flex items-center gap-3 px-4 py-3 radius-md text-14 font-medium"
+          >
+            <i class="fa-solid fa-book"></i>
+            <span>Books</span>
+          </summary>
+
+          <div class="sidebar-submenu">
+            <a href="books.html" class="sidebar-sublink active px-4 radius-md font-medium">Books</a>
+            <a href="categories.html" class="sidebar-sublink px-4 radius-md font-medium">Categories</a>
+            <a href="authors.html" class="sidebar-sublink px-4 radius-md font-medium">Authors</a>
+          </div>
+        </details>
+
+        <!-- SCHOOL -->
+        <details class="sidebar-group">
+          <summary
+            class="sidebar-link sidebar-group-toggle d-flex items-center gap-3 px-4 py-3 radius-md text-14 font-medium"
+          >
+            <i class="fa-solid fa-school"></i>
+            <span>School</span>
+          </summary>
+
+          <div class="sidebar-submenu">
+            <a href="../school/school-year.html" class="sidebar-sublink px-4 radius-md font-medium">Year</a>
+            <a href="../school/section.html" class="sidebar-sublink px-4 radius-md font-medium">Section</a>
+            <a href="../school/strand.html" class="sidebar-sublink px-4 radius-md font-medium">Strand</a>
+          </div>
+        </details>
+
+        <!-- TRANSACTIONS -->
+        <details class="sidebar-group">
+          <summary
+            class="sidebar-link sidebar-group-toggle d-flex items-center gap-3 px-4 py-3 radius-md text-14 font-medium"
+          >
+            <i class="fa-solid fa-right-left"></i>
+            <span>Transactions</span>
+          </summary>
+
+          <div class="sidebar-submenu">
+            <a href="../transactions/borrow.html" class="sidebar-sublink px-4 radius-md font-medium">Borrow</a>
+            <a href="../transactions/return.html" class="sidebar-sublink px-4 radius-md font-medium">Return</a>
+            <a href="../transactions/fines.html" class="sidebar-sublink px-4 radius-md font-medium">Fines</a>
+            <a href="../transactions/reservations.html" class="sidebar-sublink px-4 radius-md font-medium"
+              >Reservations</a
+            >
+          </div>
+        </details>
+
+        <!-- REPORTS -->
+        <details class="sidebar-group">
+          <summary
+            class="sidebar-link sidebar-group-toggle d-flex items-center gap-3 px-4 py-3 radius-md text-14 font-medium"
+          >
+            <i class="fa-solid fa-chart-column"></i>
+            <span>Reports</span>
+          </summary>
+
+          <div class="sidebar-submenu">
+            <a href="../reports/borrowing.html" class="sidebar-sublink px-4 radius-md font-medium">Borrowing</a>
+            <a href="../reports/returns.html" class="sidebar-sublink px-4 radius-md font-medium">Returns</a>
+            <a href="../reports/fines.html" class="sidebar-sublink px-4 radius-md font-medium">Fines</a>
+            <a href="../reports/inventory.html" class="sidebar-sublink px-4 radius-md font-medium">Inventory</a>
+            <a href="../reports/students.html" class="sidebar-sublink px-4 radius-md font-medium">Students</a>
+          </div>
+        </details>
+      </nav>
+
+      <!-- LOGOUT -->
+      <div class="sidebar-logout py-4 px-5">
+        <a
+          href="../../auth/sign-in.html"
+          class="sidebar-link logout-link d-flex items-center gap-3 px-4 py-3 radius-md text-14 font-medium"
+        >
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <span>Logout</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- MAIN AREA -->
+    <main class="main-area">
+      <!-- TOPBAR -->
+      <header class="topbar">
+        <form class="dashboard-search-container" role="search" id="dashboardSearchForm">
+          <div class="dashboard-search-shell">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+
+            <input
+              type="search"
+              class="search-input"
+              id="dashboardSearch"
+              name="search"
+              placeholder="Search books, students, transactions..."
+              aria-label="Search books, students, transactions"
+              autocomplete="off"
+            />
+          </div>
+        </form>
+
+        <div class="topbar-profile">
+          <div class="notification-wrapper">
+            <button
+              type="button"
+              class="notification-button"
+              id="notificationButton"
+              aria-label="Notifications"
+              aria-expanded="false"
+              aria-controls="notificationDropdown"
+            >
+              <i class="fa-regular fa-bell"></i>
+              <span class="notification-dot" id="notifDot" hidden></span>
+            </button>
+
+            <div class="notification-dropdown" id="notificationDropdown">
+              <div class="notification-header">Notifications</div>
+              <p class="notification-empty">No new notifications.</p>
+            </div>
+          </div>
+
+          <div class="profile-avatar">AL</div>
+
+          <div class="profile-info">
+            <strong>Admin Librarian</strong>
+            <span>Librarian</span>
+          </div>
+        </div>
+      </header>
+    </main>
+
+    <script src="../../assets/js/main.js"></script>
+  </body>
+</html>
