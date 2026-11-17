@@ -11,7 +11,6 @@ function authenticate(req, res, next) {
   }
 
   const [type, token] = authHeader.split(" ");
-  W;
 
   if (type !== "Bearer" || !token) {
     return res.status(StatusCodes.UNAUTHORIZED).json({
