@@ -7,8 +7,9 @@
 @import url("../layout/header.css");
 @import url("../layout/main-container.css");
 @import url("../layout/footer.css");
+@import url("../style.css");
 @import url("../layout/aside.css");
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css");
+@import url("../assets/css/base/border.css");
 
 body {
   margin: 0;
@@ -100,10 +101,6 @@ body {
   border-color: #941f43;
   box-shadow: 0 0 0 3px rgba(148, 31, 67, 0.12);
 }
-
-/* =========================================
-   PROFILE AND NOTIFICATIONS
-========================================= */
 
 .topbar-profile {
   display: flex;
@@ -225,10 +222,6 @@ body {
   font-size: 12px;
   text-align: center;
 }
-
-/* =========================================
-   PAGE HEADING
-========================================= */
 
 .accounts-heading {
   display: flex;
